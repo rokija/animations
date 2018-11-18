@@ -1,7 +1,8 @@
 import React from 'react';
+import './Home.less';
 
 const Home = () => (
-  <div>
+  <div className="Home">
     Home
   </div>
 );
