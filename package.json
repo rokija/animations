@@ -1,0 +1,83 @@
+{
+    "name": "animations",
+    "version": "0.1.0",
+    "private": false,
+    "main": "index.js",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --progress --hot --open",
+        "build": "webpack --mode production --progress",
+        "test": "jest",
+        "test-watch": "jest --watch",
+        "test-watch-all": "jest --watchAll",
+        "test-update": "jest --u",
+        "serve": "node ./src/server.js",
+        "storybook": "start-storybook -p 8020 -s ./src",
+        "build-storybook": "build-storybook --output-dir dist/storybook",
+        "lint": "eslint src --ext .js,.jsx"
+    },
+    "dependencies": {
+        "@babel/core": "^7.0.0-beta.32",
+        "@babel/plugin-proposal-class-properties": "^7.1.0",
+        "@babel/preset-env": "^7.0.0-beta.32",
+        "@babel/preset-react": "^7.0.0-beta.32",
+        "@storybook/addon-actions": "^4.0.0-alpha",
+        "@storybook/addon-links": "^4.0.0-alpha",
+        "@storybook/addon-viewport": "^v4.0.0-alpha.22",
+        "@storybook/addons": "^4.0.0-alpha",
+        "@storybook/cli": "^4.0.0-alpha",
+        "@storybook/react": "^4.0.0-alpha",
+        "autoprefixer": "^8.6.3",
+        "babel-core": "^7.0.0-bridge.0",
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "^23.6.0",
+        "babel-loader": "^8.0.2",
+        "classnames": "^2.2.6",
+        "compression": "^1.7.3",
+        "css-loader": "^1.0.0",
+        "enzyme": "^3.6.0",
+        "enzyme-adapter-react-16": "^1.5.0",
+        "enzyme-to-json": "^3.3.4",
+        "eslint": "^5.6.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-loader": "^2.1.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jsx-a11y": "^6.1.1",
+        "eslint-plugin-react": "^7.11.1",
+        "express": "^4.16.3",
+        "heroku-ssl-redirect": "0.0.4",
+        "html-loader": "^0.5.5",
+        "html-webpack-plugin": "^3.2.0",
+        "jest": "^23.6.0",
+        "less": "^3.8.1",
+        "less-loader": "^4.1.0",
+        "postcss": "^7.0.2",
+        "postcss-loader": "^3.0.0",
+        "prop-types": "^15.6.2",
+        "react": "^16.6.0",
+        "react-dom": "^16.6.0",
+        "react-router-dom": "^4.3.1",
+        "react-transition-group": "^1.2.1",
+        "storybook-react-router": "^1.0.1",
+        "style-loader": "^0.23.0",
+        "url-loader": "^1.1.1",
+        "webpack": "^4.19.1",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.8"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+        "transform": {
+            "^.+\\.js?$": "babel-jest"
+        },
+        "moduleNameMapper": {
+            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/assetsTransformer.js",
+            "\\.(css|less)$": "<rootDir>/assetsTransformer.js"
+        },
+        "collectCoverageFrom": [
+            "**/src/**/*.{js,jsx}",
+            "!**/stories/**",
+            "!**/server.js",
+            "!**/src/index.js"
+        ]
+    }
+}
