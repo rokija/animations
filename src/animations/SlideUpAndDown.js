@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import './SlideUpAndDown.less';
 
 const SlideUpAndDown = ({
-  show, children, enterTimeOut, leaveTimeOut,
+  show, children, enterTimeOut, leaveTimeOut, pageKey,
 }) => (
   <CSSTransition
+    key={pageKey}
     in={show}
     classNames={{
       enter: 'SlideUpAndDown-enter',
